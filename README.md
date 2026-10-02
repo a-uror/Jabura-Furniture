@@ -7,10 +7,10 @@ Jabura is a furniture showroom site for the shop at Cabanas, Mombasa Road, Nairo
 This is one git repository with two applications. They do not share a package manager. Install and run each one on its own.
 
 
-| Path                     | What it is                                                                      |
-| ------------------------ | ------------------------------------------------------------------------------- |
-| `frontend/`              | Public site. Next.js 16, React 19, TypeScript, Tailwind.                        |
-| `backend/`               | Catalogue, enquiries, and staff admin. Laravel 12 and Filament 5.               |
+| Path        | What it is                                                        |
+| ----------- | ----------------------------------------------------------------- |
+| `frontend/` | Public site. Next.js 16, React 19, TypeScript, Tailwind.          |
+| `backend/`  | Catalogue, enquiries, and staff admin. Laravel 12 and Filament 5. |
 
 
 `frontend/src/lib/catalog.ts` is an old fixture. Nothing in the live site imports it. The catalogue comes from the API.
@@ -149,34 +149,3 @@ php artisan test
 
 Tests use an in-memory SQLite database. They do not touch `database.sqlite`.
 
-## Publishing this repository to GitHub
-
-Do this from the repository root (`Jabura/`), not from `frontend/` or `backend/`.
-
-1. Create an empty repository on GitHub. Do not add a README, license, or `.gitignore` there. Those files already exist here.
-2. Confirm secrets are untracked:
-
-```bash
-git status
-```
-
-You should not see `backend/.env`, `frontend/.env.local`, `backend/database/database.sqlite`, `backend/vendor`, `frontend/node_modules`, `frontend/AGENTS.md`, or `frontend/CLAUDE.md`.
-
-1. Make the first commit if you have not already:
-
-```bash
-git add .
-git commit -m "Add the Jabura showroom and Filament catalogue."
-```
-
-1. Point `origin` at the GitHub repository and push. Replace the URL with yours:
-
-```bash
-git remote add origin git@github.com:OWNER/jabura.git
-git branch -M main
-git push -u origin main
-```
-
-If GitHub shows an HTTPS remote instead, use that URL in `git remote add origin`.
-
-Later pushes are `git push`. You only need `-u` the first time.
