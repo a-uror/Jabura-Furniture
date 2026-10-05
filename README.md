@@ -1,6 +1,6 @@
 # Jabura Home Furniture
 
-Jabura is a furniture showroom site for the shop at Cabanas, Mombasa Road, Nairobi. Customers browse pieces that are on the floor, then enquire by WhatsApp, phone, email, or the contact form. Staff edit the catalogue. There is no cart, no checkout, and no customer account.
+Jabura is a furniture showroom site for the shop at Cabanas, Mombasa Road, Nairobi. Customers browse pieces that are on the floor, then enquire by WhatsApp, phone, email, or the contact form. Staff edit the catalogue. 
 
 ## Repository
 
